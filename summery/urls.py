@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from imgtotext import views as v
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(('imgtotext.urls', 'imgtotext'), namespace='imgtotext')),
+    path('API/', include(('API.urls', 'API'), namespace='API')),
 
 ]
