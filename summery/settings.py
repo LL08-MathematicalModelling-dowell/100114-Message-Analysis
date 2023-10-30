@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+import sys
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,9 +27,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-q12#ov0w+x40b7jpn#nj7)!xyhw7k-@l_vz!q_i@o6i=_fswnd'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# Check if 'runserver' is in the command-line arguments
+if 'runserver' in sys.argv:
+    DEBUG = True
+else:
+    DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['livinglab100114.pythonanywhere.com','127.0.0.1']
 
 
 # Application definition
