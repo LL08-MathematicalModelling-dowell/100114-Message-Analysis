@@ -20,5 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(('imgtotext.urls', 'imgtotext'), namespace='imgtotext')),
     path('API/', include(('API.urls', 'API'), namespace='API')),
+    path('user/', include(('User.urls', 'User'), namespace='User')),
 
 ]
