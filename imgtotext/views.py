@@ -8,7 +8,7 @@ import os
 def Home(request):
     try:
         if request.session.get("session_id"):
-            return render(request, 'base.html')
+            return render(request, 'index.html')
         else:
             return redirect(f"https://100014.pythonanywhere.com/?redirect_url={settings.MY_BASE_URL}/user/login/")
     except Exception as e:

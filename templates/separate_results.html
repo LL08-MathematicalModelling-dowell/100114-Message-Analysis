@@ -1,7 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Dialogue Information</title>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Dialogue Information{% endblock %}
+
+{% block body %}
+
     <style>
         .container {
             display: grid;
@@ -13,9 +16,14 @@
             padding: 10px;
             margin: 5px;
         }
+        h2{
+            font-size:20px;
+        }
+        h3{
+            font-size:20px;
+        }
     </style>
-</head>
-<body>
+
     <div class="container">
         {% for line_info in dialogue_info %}
         <div class="box">
@@ -43,5 +51,4 @@
         </div>
         {% endfor %}
     </div>
-</body>
-</html>
+{% endblock %}

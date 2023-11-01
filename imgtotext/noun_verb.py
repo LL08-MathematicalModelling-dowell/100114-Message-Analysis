@@ -3,7 +3,7 @@ from PIL import Image
 import spacy
 
 # TESSERACT.EXE PATH = YOUR_PATH\Tesseract-OCR\tesseract.exe
-pytesseract.pytesseract.tesseract_cmd = r''
+pytesseract.pytesseract.tesseract_cmd = r'C:\Users\asifu\AppData\Local\Programs\Tesseract-OCR\tesseract.exe'
 def extract_dialogue_info_from_image(image_path):
     # Load the spaCy English language model
     nlp = spacy.load("en_core_web_sm")
