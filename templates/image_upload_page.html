@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Image Upload Page{% endblock %}
+
+
+{% block body %}
+
+
+
+    <div class="home-page-icon-boxes">
+        <div class="container">
+            <div class="row">
+                <div class="col-30 col-md-8 col-lg-4 mt-4 mt-lg-0">
+                    <div class="icon-box active" style="background:#008037;">
+
+                        <form method="post" action="{% url 'imgtotext:Collect_noun_and_verb' %}" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <input type="file" name="image"><br><br>
+                                    <input type="submit" class="btn orange-border"></input>
+                        </form>
+
+                    </div>
+                </div>
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </div><!-- .home-page-icon-boxes -->
+
+{% endblock %}

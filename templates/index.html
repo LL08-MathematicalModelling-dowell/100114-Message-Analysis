@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Dowell Service{% endblock %}
+
+{% block body %}
+    <div class="home-page-icon-boxes">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 mt-4 mt-lg-0">
+                    <div class="icon-box active" style="background:#008037;">
+                        <figure class="d-flex justify-content-center">
+                            <img src="images/hands-gray.png" alt="">
+                            <img src="images/hands-white.png" alt="">
+                        </figure>
+
+                        <header class="entry-header">
+                            <a href="{% url 'imgtotext:Collect_noun_and_verb' %}">
+                                <h3 class="entry-title">Summery Generate</h3>
+                            </a>
+                        </header>
+
+                        <div class="entry-content">
+                            <p>We will give the optimal solution for you. Please try..!</p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </div><!-- .home-page-icon-boxes -->
+{% endblock %}
