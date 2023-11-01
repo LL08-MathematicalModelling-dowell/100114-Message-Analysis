@@ -8,10 +8,13 @@ import os
 def Home(request):
     try:
         if request.session.get("session_id"):
+            print('home1')
             return render(request, 'index.html')
         else:
+            print('home2')
             return redirect(f"https://100014.pythonanywhere.com/?redirect_url={settings.MY_BASE_URL}/user/login/")
     except Exception as e:
+        print(str(e))
         return redirect(f"https://100014.pythonanywhere.com/?redirect_url={settings.MY_BASE_URL}/user/login/")
 
 def Collect_noun_and_verb(request):

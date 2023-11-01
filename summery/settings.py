@@ -28,11 +28,12 @@ SECRET_KEY = 'django-insecure-q12#ov0w+x40b7jpn#nj7)!xyhw7k-@l_vz!q_i@o6i=_fswnd
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # Check if 'runserver' is in the command-line arguments
-if 'runserver' in sys.argv:
-    DEBUG = True
-else:
-    DEBUG = False
+# if 'runserver' in sys.argv:
+#     DEBUG = True
+# else:
+#     DEBUG = False
 
+DEBUG = True
 ALLOWED_HOSTS = ['livinglab100114.pythonanywhere.com','127.0.0.1']
 
 
