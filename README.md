@@ -30,16 +30,16 @@ To get started with this project, you have two options:
 To submit a request for the database, please begin by logging into Message Analysis page. You can access the login page by clicking on the following link: [Message Analysis Login](https://livinglab100114.pythonanywhere.com/) <br>
 Once you have successfully logged in, you will be redirected to the home page. From there, you can see an option which is "summery generator".
 
-![Home](screenshots/home.jpg)
+![Home](screenshots/home.JPG)
 <br>
 <br>
 ## Step 2:
 After clicking "summery generator" you'll redirect another page, where you just need to upload your image (text related image).
-![Image_Upload](screenshots/upload.jpg)
+![Image_Upload](screenshots/upload.JPG)
 <br>
 ## Step 3:
 By uploading "image" you need to press the submit button and after that you will redirect result page.
-![Result](screenshots/result.jpg)
+![Result](screenshots/result.JPG)
 <br>
 
 # API Detailed Documentation
