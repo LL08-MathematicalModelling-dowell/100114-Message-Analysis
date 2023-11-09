@@ -1,6 +1,6 @@
 # DoWell Message Analysis Project From DoWell UX Living Lab
 
-Welcome to the DoWell DoWell Message Analysis Project! The Message Analysis Project is a tool that allows users to extract text from images and analyze it to identify nouns, verbs, and adjectives. It also provides an API for text analysis, making it easy to integrate into other applications.
+Welcome to the DoWell Message Analysis Project! The Message Analysis Project is a tool that allows users to extract text from images or from any paragraph and analyze it to identify nouns, verbs, and adjectives. It also provides an API for text analysis, making it easy to integrate into other applications.
 
 ## Features
 
@@ -15,7 +15,7 @@ To get started with this project, you have two options:
 
 1. **Web Interface:**
 
-   - Visit our web application [here](https://100093.pythonanywhere.com/) to upload an image and analyze the text.
+   - Visit our web application [here](https://100093.pythonanywhere.com/) to upload an image or write/paste paragraph and analyze the text.
    
 2. **API Usage:**
 
@@ -27,8 +27,8 @@ To get started with this project, you have two options:
 # Steps to use DoWell Message Analysis Web App
 
 ## Step 1:
-To submit a request for the database, please begin by logging into Message Analysis page. You can access the login page by clicking on the following link: [Message Analysis Login](https://livinglab100114.pythonanywhere.com/) <br>
-Once you have successfully logged in, you will be redirected to the home page. From there, you can see an option which is "summery generator".
+To analyze your text, please begin by logging into Message Analysis page. You can access the login page by clicking on the following link: [Message Analysis Login](https://livinglab100114.pythonanywhere.com/) <br>
+Once you have successfully logged in, you will see this page. From there, you can see an option which is "summery generator".
 
 ![Home](screenshots/home.jpg)
 <br>

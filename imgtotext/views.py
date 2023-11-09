@@ -1,3 +1,5 @@
+import shutil
+
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from imgtotext.noun_verb import extract_dialogue_info_from_image
@@ -8,6 +10,7 @@ import os
 def Home(request):
     try:
         if request.session.get("session_id"):
+            print(request.session.get("session_id"))
             print('home1')
             return render(request, 'index.html')
         else:
@@ -28,11 +31,17 @@ def Collect_noun_and_verb(request):
             if request.method == 'POST':
                 if 'image' in request.FILES:
                     uploaded_image = request.FILES['image']
+                    user_id = request.session.get('session_id')
 
-                    fs = FileSystemStorage(location=os.path.join(settings.STATICFILES_DIRS[0], 'UPLOAD'))
+                    fs = FileSystemStorage(location=os.path.join(settings.STATICFILES_DIRS[0], 'UPLOAD', str(user_id)))
                     saved_path = fs.save(uploaded_image.name, uploaded_image)
 
-                    result_dict = extract_dialogue_info_from_image(os.path.join(settings.STATICFILES_DIRS[0], 'UPLOAD', saved_path))
+                    result_dict = extract_dialogue_info_from_image(
+                        os.path.join(settings.STATICFILES_DIRS[0], 'UPLOAD', str(user_id), saved_path))
+
+                    image_path = os.path.join(settings.STATICFILES_DIRS[0], 'UPLOAD', str(user_id))
+                    if os.path.exists(image_path):
+                        shutil.rmtree(image_path)
 
                 return render(request, 'separate_results.html', {'dialogue_info': result_dict})
         else:

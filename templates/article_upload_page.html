@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Article Upload Page{% endblock %}
+
+
+{% block body %}
+
+
+<div class="home-page-icon-boxes" xmlns="http://www.w3.org/1999/html">
+        <div class="container">
+<!--            <div class="row">-->
+<!--                <div class="col-30 col-md-8 col-lg-4 mt-4 mt-lg-0">-->
+                    <div class="icon-box active" style="background:#008037;">
+                        <h4>Write or Paste Paragraph</h4>
+                        <form method="post" action="{% url 'paragtotext:Collect_noun_and_verb_from_article' %}" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <textarea name="article" style="width:80%; height:150px;"></textarea> <br><br>
+                            <input type="submit" class="btn orange-border" value="Generate">
+                        </form>
+
+                    </div>
+<!--                </div>-->
+<!--            </div>&lt;!&ndash; .row &ndash;&gt;-->
+        </div><!-- .container -->
+    </div><!-- .home-page-icon-boxes -->
+
+{% endblock %}
