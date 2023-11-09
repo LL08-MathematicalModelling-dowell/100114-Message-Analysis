@@ -35,6 +35,8 @@ SECRET_KEY = 'django-insecure-q12#ov0w+x40b7jpn#nj7)!xyhw7k-@l_vz!q_i@o6i=_fswnd
 
 DEBUG = True
 ALLOWED_HOSTS = ['livinglab100114.pythonanywhere.com','127.0.0.1']
+# ALLOWED_HOSTS = ['127.0.0.1']
+
 
 
 # Application definition
@@ -47,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'imgtotext',
+    'paragtotext',
     'rest_framework',
     'API',
     'User',
@@ -141,3 +144,5 @@ MEDIAFILES_DIRS = (os.path.join(BASE_DIR, 'media'),)
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MY_BASE_URL = 'https://livinglab100114.pythonanywhere.com'
+# MY_BASE_URL = 'http://127.0.0.1:8000/'
+

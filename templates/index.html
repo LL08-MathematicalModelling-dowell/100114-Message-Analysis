@@ -15,10 +15,32 @@
                         </figure>
 
                         <header class="entry-header">
-                            <a href="{% url 'imgtotext:Collect_noun_and_verb' %}">
-                                <h3 class="entry-title">Summery Generate</h3>
-                            </a>
+                                <h3 class="entry-title">Collect from Image</h3>
                         </header>
+                        <a href="{% url 'imgtotext:Collect_noun_and_verb' %}">
+                        <button class="btn orange-border" >Click me</button>
+                        </a>
+
+
+                        <div class="entry-content">
+                            <p>We will give the optimal solution for you. Please try..!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mt-4 mt-lg-0">
+                    <div class="icon-box active" style="background:#008037;">
+                        <figure class="d-flex justify-content-center">
+                            <img src="images/hands-gray.png" alt="">
+                            <img src="images/hands-white.png" alt="">
+                        </figure>
+
+                        <header class="entry-header">
+                                <h3 class="entry-title">Collect from Article</h3>
+                        </header>
+                        <a href="{% url 'paragtotext:Collect_noun_and_verb_from_article' %}">
+                        <button class="btn orange-border" >Click me</button>
+                        </a>
+
 
                         <div class="entry-content">
                             <p>We will give the optimal solution for you. Please try..!</p>
@@ -28,4 +50,5 @@
             </div><!-- .row -->
         </div><!-- .container -->
     </div><!-- .home-page-icon-boxes -->
+
 {% endblock %}

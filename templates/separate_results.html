@@ -22,32 +22,47 @@
         h3{
             font-size:20px;
         }
+        table {
+            width: 100%;
+        }
+        td {
+            vertical-align: top;
+        }
     </style>
 
     <div class="container">
         {% for line_info in dialogue_info %}
         <div class="box">
-            <h2>Line {{ forloop.counter }}</h2>
-            <h3>Nouns</h3>
-            <div class="noun-boxes">
-                {% for noun in line_info.nouns %}
-                <div>{{ noun }}</div>
-                {% endfor %}
-            </div>
+            <table>
+                <tr>
+                    <td>
+                        <h3>Nouns</h3>
+                        <div class="noun-boxes">
+                            {% for noun in line_info.nouns %}
+                            <div>{{ noun }}</div>
+                            {% endfor %}
+                        </div>
+                    </td>
 
-            <h3>Adjectives</h3>
-            <div class="adjective-boxes">
-                {% for adjective in line_info.adjectives %}
-                <div>{{ adjective }}</div>
-                {% endfor %}
-            </div>
+                    <td>
+                        <h3>Adjectives</h3>
+                        <div class="adjective-boxes">
+                            {% for adjective in line_info.adjectives %}
+                            <div>{{ adjective }}</div>
+                            {% endfor %}
+                        </div>
+                    </td>
 
-            <h3>Verbs</h3>
-            <div class="verb-boxes">
-                {% for verb in line_info.verbs %}
-                <div>{{ verb }}</div>
-                {% endfor %}
-            </div>
+                    <td>
+                        <h3>Verbs</h3>
+                        <div class="verb-boxes">
+                            {% for verb in line_info.verbs %}
+                            <div>{{ verb }}</div>
+                            {% endfor %}
+                        </div>
+                    </td>
+                </tr>
+            </table>
         </div>
         {% endfor %}
     </div>
