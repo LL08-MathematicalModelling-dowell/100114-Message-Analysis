@@ -32,7 +32,7 @@ To get started with this project, you have two options:
 To analyze your text, please begin by logging into Message Analysis page. You can access the login page by clicking on the following link: [Message Analysis Login](https://livinglab100114.pythonanywhere.com/) <br>
 Once you have successfully logged in, you will see this page.
 
-![Home](screenshots/home.JPG)
+![Home](screenshots/home_v2.JPG)
 <br>
 <br>
 ## Step 2:
