@@ -23,9 +23,9 @@ class SentenceAnalysisView(APIView):
                          "data": []},
                         status=status.HTTP_404_NOT_FOUND)
 
-                nouns, adjectives, verbs = For_noun_verb_adj(json_data['data_sentence'])
+                nouns, adjectives, verbs = For_noun_verb_adj(json_data['paragraph'])
                 analysis = {
-                    "sentence": json_data['data_sentence'],
+                    "sentence": json_data['paragraph'],
                     "nouns": nouns,
                     "adjectives": adjectives,
                     "verbs": verbs,
