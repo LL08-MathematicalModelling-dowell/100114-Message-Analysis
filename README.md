@@ -7,6 +7,7 @@ Welcome to the DoWell Message Analysis Project! The Message Analysis Project is 
 - Extract text from images using Optical Character Recognition (OCR).
 - Analyze extracted text to identify nouns, verbs, and adjectives.
 - User-friendly web interface for image uploads and analysis.
+- User-friendly web interface for paragraph writing and analysis.
 - API endpoint for text analysis.
 
 ## Getting Started
@@ -26,21 +27,36 @@ To get started with this project, you have two options:
 
 # Steps to use DoWell Message Analysis Web App
 
+# Extract Parts of Speech from an Image
 ## Step 1:
 To analyze your text, please begin by logging into Message Analysis page. You can access the login page by clicking on the following link: [Message Analysis Login](https://livinglab100114.pythonanywhere.com/) <br>
-Once you have successfully logged in, you will see this page. From there, you can see an option which is "summery generator".
+Once you have successfully logged in, you will see this page.
 
-![Home](screenshots/home.JPG)
+![Home](screenshots/home_v2.JPG)
 <br>
 <br>
 ## Step 2:
-After clicking "summery generator" you'll redirect another page, where you just need to upload your image (text related image).
-![Image_Upload](screenshots/upload.JPG)
+By clicking the button of "Extract Parts of Speech from an Image" you'll see this page.
+![Image_Upload](screenshots/upload_img.JPG)
 <br>
 ## Step 3:
-By uploading "image" you need to press the submit button and after that you will redirect result page.
-![Result](screenshots/result.JPG)
+By uploading "image" you need to press the submit button and after that you will view the result page.
+![Result](screenshots/result_img.JPG)
 <br>
+<br>
+
+# Extract Parts of Speech from a Paragraph
+## Step 1:
+By clicking the button of "Extract Parts of Speech from a Paragraph" you'll see this page.
+![Image_Upload](screenshots/upload_doc.JPG)
+<br>
+## Step 2:
+By writing or pasting paragraph you need to press the submit button and after that you will view the result page.
+![Result](screenshots/result_doc.JPG)
+<br>
+
+# Use Message Analysis using APIs
+Click here to read the documentation in postman [Documentation](https://documenter.getpostman.com/view/29895764/2s9YXh5NCZ)
 
 # API Detailed Documentation
 =============================================================================
@@ -85,9 +101,19 @@ print(response.text)
 
 #### Response:
 
-- For success: `{"data": "[]"}` (an empty array in this example)
-- For error: `{"message": "Invalid Api key"}`
-- 
+- For success: `"success": true,
+    "message": "We successfully analyzed the data",
+    "data": {
+        "sentence": "your-data",
+        "nouns": [
+            "data"
+        ],
+        "adjectives": [],
+        "verbs": []
+    }`
+- For error: `"success": false,
+    "message": "API key not found",
+    "data": []`
 
 ### Response Codes
 
