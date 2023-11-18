@@ -10,14 +10,14 @@ import os
 def Home(request):
     try:
         if request.session.get("session_id"):
-            print(request.session.get("session_id"))
-            print('home1')
+            # print(request.session.get("session_id"))
+            # print('home1')
             return render(request, 'index.html')
         else:
-            print('home2')
+            # print('home2')
             return redirect(f"https://100014.pythonanywhere.com/?redirect_url={settings.MY_BASE_URL}/user/login/")
     except Exception as e:
-        print(str(e))
+        # print(str(e))
         return redirect(f"https://100014.pythonanywhere.com/?redirect_url={settings.MY_BASE_URL}/user/login/")
 
 def Collect_noun_and_verb(request):
@@ -38,6 +38,8 @@ def Collect_noun_and_verb(request):
 
                     result_dict = extract_dialogue_info_from_image(
                         os.path.join(settings.STATICFILES_DIRS[0], 'UPLOAD', str(user_id), saved_path))
+
+                    # print(result_dict)
 
                     image_path = os.path.join(settings.STATICFILES_DIRS[0], 'UPLOAD', str(user_id))
                     if os.path.exists(image_path):

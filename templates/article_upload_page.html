@@ -13,7 +13,7 @@
 <!--                <div class="col-30 col-md-8 col-lg-4 mt-4 mt-lg-0">-->
                     <div class="icon-box active" style="background:#008037;">
                         <h4>Write or Paste Paragraph</h4>
-                        <form method="post" action="{% url 'paragtotext:Collect_noun_and_verb_from_article' %}" enctype="multipart/form-data">
+                        <form method="post" action="{% url 'paragtotext:Collect_noun_and_verb_from_article_with_time' %}" enctype="multipart/form-data">
                             {% csrf_token %}
                             <textarea name="article" style="width:80%; height:150px;"></textarea> <br><br>
                             <input type="submit" class="btn orange-border" value="Generate">
