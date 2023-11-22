@@ -29,3 +29,19 @@
 #
 # # Print the organized information in the desired format
 # print(result)
+#
+# import re
+#
+# input_text = """
+# Nadeem — 9:24am
+# Joint diplomatic statement issued by multiple countries' governments concerning recent violence and gatherings.
+# Jacobninandowell — 9:45am
+# This is concerning.
+# """
+#
+# time_pattern = r'\b\d{1,2}:\d{2}[apmAPM]{2}'
+#
+# matches = re.findall(f"{time_pattern}\s*(.*?)(?={time_pattern}|$)", input_text, re.DOTALL)
+# dialogue_info = {time.group(0): text.strip() for time, text in zip(re.finditer(time_pattern, input_text), matches)}
+#
+# print(dialogue_info)
